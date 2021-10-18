@@ -4,7 +4,7 @@
 
 ~bang.el~ allows one to [[https://duckduckgo.com/][DuckDuckGo's]] [[https://duckduckgo.com/bang][!Bang]] from the comfort of Emacs.
 
-It adds special support for Org-roam, with the function ~bang-roam~ allowing one to search with the roam node's title, and ~bang-roam-wiki~, which does the same specifically for Wikipedia.
+It adds special support for [[https://www.orgroam.com/][Org-roam]], with the function ~bang-roam~ allowing one to search with the roam node's title, and ~bang-roam-wiki~, which does the same specifically for Wikipedia.
 
 ** Installation
 
@@ -25,7 +25,10 @@ In ~config.el~:
 All functions can also be called interactively.
 
 #+begin_src
+;; Can be called from anywhere:
 (bang "w" "Gnosis")
+
+;; Must be called from inside an Org-roam node:
 (bang-roam "ma")
 (bang-roam-wiki)
 #+end_src
