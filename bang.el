@@ -34,9 +34,11 @@ sEnter the term you wish to search:")
 (defun bang-roam (prefix)
   "Use the node's title to search using the Bang PREFIX."
   (interactive "sEnter the bang prefix: ")
-  (bang prefix
-   (org-roam-node-title
-    (org-roam-node-at-point))))
+  (condition-case nil
+      (bang prefix
+            (org-roam-node-title
+             (org-roam-node-at-point)))
+    (error (message "Error: not inside an org-roam node."))))
 
 (defun bang-roam-wiki ()
   "Use the node's title to find the corresponding Wikipedia entry."
