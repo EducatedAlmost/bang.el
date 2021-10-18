@@ -20,7 +20,6 @@
 ;;; Code:
 
 (require 'org-roam)
-(provide 'bang)
 
 (defun bang (prefix term)
   "Using !Bang, search for TERM in website with corresponding PREFIX."
@@ -43,5 +42,7 @@ sEnter the term you wish to search:")
   "Use the node's title to find the corresponding Wikipedia entry."
   (interactive)
   (bang-roam "w"))
+
+(provide 'bang)
 
 ;;; bang.el ends here
