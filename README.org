@@ -2,9 +2,9 @@
 
 * bang.el
 
-`bang.el` allows one to [[https://duckduckgo.com/][DuckDuckGo's]] [[https://duckduckgo.com/bang][!Bang]] from the comfort of Emacs.
+~bang.el~ allows one to [[https://duckduckgo.com/][DuckDuckGo's]] [[https://duckduckgo.com/bang][!Bang]] from the comfort of Emacs.
 
-It adds special support for Org-roam, with the function `bang-roam` allowing one to search with the roam node's title, and `bang-roam-wiki`, which does the same for Wikipedia.
+It adds special support for Org-roam, with the function ~bang-roam~ allowing one to search with the roam node's title, and ~bang-roam-wiki~, which does the same for Wikipedia.
 
 ** Installation
 
@@ -14,4 +14,4 @@ It adds special support for Org-roam, with the function `bang-roam` allowing one
 
 ** Changing which browser is used
 
-Internally, the functions all call `browse-url`. To choose which program is used, one can edit the values of `browse-url-browser-function` and `browse-url-generic-function` as documented [[https://www.emacswiki.org/emacs/BrowseUrl][here]].
+Internally, the functions all call ~browse-url~. To choose which program is used, one can edit the values of ~browse-url-browser-function~ and ~browse-url-generic-function~ as documented [[https://www.emacswiki.org/emacs/BrowseUrl][here]].
