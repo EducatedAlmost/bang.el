@@ -4,13 +4,33 @@
 
 ~bang.el~ allows one to [[https://duckduckgo.com/][DuckDuckGo's]] [[https://duckduckgo.com/bang][!Bang]] from the comfort of Emacs.
 
-It adds special support for Org-roam, with the function ~bang-roam~ allowing one to search with the roam node's title, and ~bang-roam-wiki~, which does the same for Wikipedia.
+It adds special support for Org-roam, with the function ~bang-roam~ allowing one to search with the roam node's title, and ~bang-roam-wiki~, which does the same specifically for Wikipedia.
 
 ** Installation
 
 *** Doom Emacs
 
+In ~packages.el~:
+#+begin_src
+(package! bang :recipe (:host github :repo "EducatedAlmost/bang.el"))
+#+end_src
+
+In ~config.el~:
+#+begin_src
+(require 'bang)
+#+end_src
+
 ** Usage
+
+All functions can also be called interactively.
+
+#+begin_src
+(bang "w" "Gnosis")
+(bang-roam "ma")
+(bang-roam-wiki)
+#+end_src
+
+For a list of prefixes, see [[https://duckduckgo.com/bang][here]].
 
 ** Changing which browser is used
 
