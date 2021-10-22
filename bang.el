@@ -31,6 +31,16 @@ sEnter the term you wish to search:")
     "https://duckduckgo.com/?q=!"
     prefix " " term)))
 
+(defun bang-info ()
+  "Visit the homepage for !Bangs."
+  (interactive)
+  (bang "bang" ""))
+
+(defun bang-find-prefix (website)
+  "Find the !Bang prefix for WEBSITE."
+  (interactive "sWebsite: ")
+  (bang "bang" website))
+
 (defun bang-roam (prefix)
   "Use the node's title to search using the Bang PREFIX."
   (interactive "sEnter the bang prefix: ")
