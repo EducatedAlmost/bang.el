@@ -24,12 +24,11 @@
 (defun bang (prefix term)
   "Using !Bang, search for TERM in website with corresponding PREFIX."
   (interactive
-   "sEnter the Bang prefix:
-sEnter the term you wish to search:")
-  (browse-url
-   (concat
-    "https://duckduckgo.com/?q=!"
-    prefix " " term)))
+   (list (read-string "Enter the !Bang prefix: ")
+         (read-string "Enter the term you wish to search: "
+                      (when (use-region-p)
+                        (buffer-substring (region-beginning) (region-end))))))
+  (browse-url (concat "https://duckduckgo.com/?q=!" prefix "+" term)))
 
 (defun bang-info ()
   "Visit the homepage for !Bangs."
