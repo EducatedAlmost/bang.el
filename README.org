@@ -8,6 +8,8 @@ It adds special support for [[https://www.orgroam.com/][Org-roam]], with the fun
 
 ** Installation
 
+~bang.el~ requires that [[https://www.orgroam.com/][org-roam]] also be installed. We are working to make this an optional requirement.
+
 *** Doom Emacs
 
 In ~packages.el~:
