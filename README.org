@@ -27,6 +27,8 @@ All functions can also be called interactively.
 #+begin_src elisp
 ;; Can be called from anywhere:
 (bang "w" "Gnosis")
+(bang-info)
+(bang-find-prefix "")
 
 ;; Must be called from inside an Org-roam node:
 (bang-roam "ma")
