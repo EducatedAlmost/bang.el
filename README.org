@@ -37,7 +37,18 @@ All functions can also be called interactively.
 (bang-roam-wiki)
 #+end_src
 
-For a list of prefixes, see [[https://duckduckgo.com/bang][here]].
+** Example prefixes
+
+- ~!gh~ :: GitHub repositories
+- ~!clj~ :: ClojureDocs
+- ~!xiny~ :: Learn X in Y minutes, a introduction to any programming language
+- ~!pm~ :: PubMed, biomedical papers
+- ~!arx~ :: arXiv, physics papers
+- ~!wa~ :: WolframAlpha, computational knowledge engine
+- ~!ma~ :: MemoryAlpha, the Star Trek Wiki
+- ~!awoiaf~ :: A Wiki of Ice and Fire
+
+For a list of prefixes, see [[https://duckduckgo.com/bang][here]], or call ~bang-find-prefix~.
 
 ** Changing which browser is used
 
