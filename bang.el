@@ -35,12 +35,12 @@
   (browse-url (bang-make-link prefix term)))
 
 (defun bang-info ()
-  "Visit the homepage for !Bangs."
+  "Visit the homepage for Bangs."
   (interactive)
   (bang "bang" ""))
 
 (defun bang-find-prefix (website)
-  "Find the !Bang prefix for WEBSITE."
+  "Find the Bang prefix for WEBSITE."
   (interactive "sWebsite: ")
   (bang "bang" website))
 
