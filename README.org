@@ -11,12 +11,12 @@ It adds special support for [[https://www.orgroam.com/][Org-roam]], with the fun
 *** Doom Emacs
 
 In ~packages.el~:
-#+begin_src
+#+begin_src elisp
 (package! bang :recipe (:host github :repo "EducatedAlmost/bang.el"))
 #+end_src
 
 In ~config.el~:
-#+begin_src
+#+begin_src elisp
 (require 'bang)
 #+end_src
 
@@ -24,7 +24,7 @@ In ~config.el~:
 
 All functions can also be called interactively.
 
-#+begin_src
+#+begin_src elisp
 ;; Can be called from anywhere:
 (bang "w" "Gnosis")
 
