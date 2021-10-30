@@ -1,6 +1,6 @@
-#+TITLE: Readme
+* æ/bang.el
 
-* bang.el
+Read the blog post: https://blog.almost.education/posts/bang-el
 
 ~bang.el~ allows one to [[https://duckduckgo.com/][DuckDuckGo's]] [[https://duckduckgo.com/bang][!Bang]] from the comfort of Emacs.
 
@@ -37,6 +37,8 @@ All functions can also be called interactively.
 (bang-roam-wiki)
 #+end_src
 
+Called without a ~TERM~ argument, most Bangs will take one to the website's homepage.
+
 ** Example prefixes
 
 - ~!gh~ :: GitHub repositories
@@ -48,7 +50,9 @@ All functions can also be called interactively.
 - ~!ma~ :: MemoryAlpha, the Star Trek Wiki
 - ~!awoiaf~ :: A Wiki of Ice and Fire
 
-For a list of prefixes, see [[https://duckduckgo.com/bang][here]], or call ~bang-find-prefix~.
+For a list of prefixes, see [[https://duckduckgo.com/bang][here]], or call ~bang-find-prefix~ or ~bang-info~.
+
+To suggest a new Bang or correct an existing one: https://duckduckgo.com/newbang
 
 ** Changing which browser is used
 
