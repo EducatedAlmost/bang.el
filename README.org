@@ -20,6 +20,11 @@ In ~packages.el~:
 In ~config.el~:
 #+begin_src elisp
 (require 'bang)
+
+;; or, with roam support
+(setq bang-roam-support t)
+(after! org
+  (require 'bang))
 #+end_src
 
 ** Usage

@@ -19,8 +19,6 @@
 ;;
 ;;; Code:
 
-(require 'org-roam)
-
 (defun bang-make-link (prefix term)
   "Make the link that is used to search with Bangs, '!PREFIX TERM'."
   (concat "https://duckduckgo.com/?q=!" prefix "+" term))
@@ -44,19 +42,24 @@
   (interactive "sWebsite: ")
   (bang "bang" website))
 
-(defun bang-roam (prefix)
-  "Use the node's title to search using the Bang PREFIX."
-  (interactive "sEnter the bang prefix: ")
-  (condition-case nil
-      (bang prefix
-            (org-roam-node-title
-             (org-roam-node-at-point)))
-    (error (message "Error: not inside an org-roam node."))))
+(defvar bang-roam-support nil)
 
-(defun bang-roam-wiki ()
-  "Use the node's title to find the corresponding Wikipedia entry."
-  (interactive)
-  (bang-roam "w"))
+(when bang-roam-support
+  (require 'org-roam)
+
+  (defun bang-roam (prefix)
+    "Use the node's title to search using the Bang PREFIX."
+    (interactive "sEnter the bang prefix: ")
+    (condition-case nil
+        (bang prefix (org-roam-node-title (org-roam-node-at-point)))
+      (error (message "Error: not inside an org-roam node."))))
+
+  (defun bang-roam-wiki ()
+    "Use the node's title to find the corresponding Wikipedia entry."
+    (interactive)
+    (bang-roam "w"))
+
+  (provide 'bang-roam))
 
 (provide 'bang)
 
